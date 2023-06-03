@@ -1,0 +1,10 @@
+{
+  "name": "@pkg/confirm",
+  "version": "1.0.0",
+  "main": "confirm.ts",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^4.4.4",
+    "vue": "^3.2.36"
+  }
+}
