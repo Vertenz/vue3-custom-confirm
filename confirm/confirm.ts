@@ -1,24 +1,23 @@
 import { createApp } from 'vue';
-import ConfirmDialog from "./components/ConfirmDialog.vue";
+import ConfirmDialog from "./components/wrapper.js";
 
-interface ConfirmOptions {
+type ConfirmOptions = {
     message: string;
     onDone?: () => void;
     onClose?: () => void;
-}
-
+};
 export default function useConfirm() {
     const confirm = (options: ConfirmOptions): void => {
         if (options?.message) {
             const app = createApp(ConfirmDialog, {
                 options,
                 onDone: async () => {
-                    await options.onDone();
-                    app.unmount(dialog);
+                    await options.onDone?.();
+                    app.unmount();
                 },
                 onClose: async () => {
-                    await options.onClose();
-                    app.unmount(dialog);
+                    await options.onClose?.();
+                    app.unmount();
                 },
             });
 
@@ -32,4 +31,3 @@ export default function useConfirm() {
         confirm,
     };
 }
-

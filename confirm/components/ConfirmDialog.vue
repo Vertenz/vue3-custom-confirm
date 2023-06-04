@@ -11,15 +11,11 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
-
-import { defineProps } from 'vue';
-
-const props = defineProps({
+const props = {
   options: Object,
   onDone: Function,
   onClose: Function,
-});
+};
 
 const handleConfirm = () => {
   props.onDone();
@@ -30,7 +26,7 @@ const handleClose = () => {
 };
 </script>
 
-<style scoped>
+<style>
 .wrapper {
   position: absolute;
   top: 0;
