@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import useConfirm from '@pkg/confirm';
+import useConfirm from 'vue3-custom-confirm/index.ts';
 
 const { confirm } = useConfirm();
 

@@ -1,6 +1,6 @@
 {
   "name": "vue3-custom-confirm",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "private": false,
   "description": "Please note that this is just an example, and you can modify the content and structure of the files according to your specific needs and preferences. This repository contains a custom confirm plugin for Vue 3 that replicates the functionality of the native JavaScript confirm() function. It provides a customizable confirmation dialog component that can be used in Vue 3 applications.",
   "keywords": [
@@ -17,22 +17,15 @@
   "bugs": {
     "url": "https://github.com/Vertenz/vue3-custom-confirm/issues"
   },
-  "files": ["dist"],
-  "main": "./dist/vue-confirm.umd.js",
-  "module": "./dist/vue-confirm.mjs",
+  "main": "index.ts",
   "types": "types/index.d.ts",
-  "scripts": {
-    "build": "vite build && vue-tsc --emitDeclarationOnly"
-  },
   "dependencies": {
     "vue": "^3.2.37"
   },
   "devDependencies": {
     "@vue/compiler-sfc": "^3.3.4",
     "@types/node": "^20.2.5",
-    "@vitejs/plugin-vue": "^3.1.0",
     "typescript": "^4.6.4",
-    "vite": "^3.1.0",
     "vue-tsc": "^0.40.4"
   }
 }
